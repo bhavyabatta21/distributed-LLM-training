@@ -75,7 +75,7 @@ windowSize = 15
 overlap = 7
 ```
 
-###Building the Project
+### Building the Project
 
 To compile and package the project, run:
 ```
@@ -87,17 +87,17 @@ Running Tests
 Test files are located in src/test. Run tests with:
 sbt test
 ```
-##Project Components
+## Project Components
 
-###Sliding Window Generation
+### Sliding Window Generation
 
 The sliding window algorithm generates training samples with positional embeddings. This 3D tensor structure (batch size, sequence length, embedding size) is optimized for parallel processing on Spark.
 
-###Word2Vec and Attention Mechanism
+### Word2Vec and Attention Mechanism
 
 Uses Word2Vec for vector embeddings and integrates an attention mechanism to improve prediction accuracy. Spark processes sliding windows across a distributed cluster, leveraging parameter averaging or shared parameter server for distributed model training.
 
-###AWS EMR Deployment
+### AWS EMR Deployment
 
 This project is designed to be executed on AWS EMR for scalable processing. Setup instructions for EMR deployment:
 
@@ -111,7 +111,7 @@ spark-submit \
   --deploy-mode cluster \
   s3a://bucket-name/path-to-jar.jar
 ```
-###Usage
+### Usage
 
 To execute the project, follow these steps:
 
@@ -120,7 +120,7 @@ To execute the project, follow these steps:
 	3.	Training: Run the training job on EMR, using the configurations in application.conf.
 	4.	Result Analysis: Check output files in the specified output directory.
 
-###Results and Output
+### Results and Output
 
 The program outputs:
 
@@ -128,12 +128,12 @@ The program outputs:
 	2.	Statistics File: Includes gradient norms, training loss, accuracy, and time per epoch.
 	3.	Generated Text: The trained model is used to generate text based on a seed query.
 
-###Logging and Configuration
+### Logging and Configuration
 
 	•	Logging: Uses SLF4J with Logback to manage logging levels (TRACE, INFO, WARN, ERROR).
 	•	Configuration: Parameters are managed through the Typesafe Configuration Library to ensure maintainability and flexibility.
 
 
-##Conclusion
+## Conclusion
 
 This project demonstrates the use of Spark and AWS EMR for distributed training of a large language model. It provides hands-on experience with cloud-based neural network training, focusing on scalability and efficiency using Spark’s distributed framework.
