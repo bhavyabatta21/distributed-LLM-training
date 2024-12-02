@@ -2,7 +2,9 @@
 # Building and Training a Distributed Large Language Model (LLM) with Spark and AWS EMR
 
 **Demo Video**: https://youtu.be/H-hUezj_hX0
+
 **Author**: Bhavya Batta
+
 **Email**: bbatta@uic.edu
 
 
